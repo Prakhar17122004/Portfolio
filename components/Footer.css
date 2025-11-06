@@ -1,0 +1,128 @@
+/* ===== Footer Section ===== */
+.footer-section {
+  background: #0b0f14;
+  color: #d1d5db;
+  padding: 60px 20px 30px;
+  border-top: 1px solid #1f2937;
+}
+
+/* ===== Container ===== */
+.footer-container {
+  display: flex;
+  justify-content: space-evenly; /* 👈 ensures equal spacing */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 60px; /* consistent spacing between all columns */
+  text-align: left;
+}
+
+/* ===== Left Section ===== */
+.footer-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-desc {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 350px;
+}
+
+/* ===== Middle Section ===== */
+.footer-middle {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #22d3ee;
+}
+
+/* ===== Right Section ===== */
+.footer-right {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.footer-icon-link {
+  color: #d1d5db;
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+}
+
+.footer-icon-link:hover {
+  color: #22d3ee;
+  transform: scale(1.1);
+}
+
+/* ===== Bottom Line ===== */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1f2937;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* ===== Responsive View ===== */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    min-width: unset;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}

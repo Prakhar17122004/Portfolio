@@ -1,0 +1,224 @@
+/* ===== Education Section ===== */
+.edu-section {
+  background: #000;
+  color: #fff;
+  padding: 80px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.edu-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #08e3b7d5;
+  margin-bottom: 60px;
+}
+
+/* ===== Timeline Layout ===== */
+.edu-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 600px;
+}
+
+/* ===== Animated Line ===== */
+.edu-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0%; /* animated */
+  background: linear-gradient(180deg, #a855f7, #22d3ee);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  border-radius: 2px;
+  z-index: 1;
+  transition: height 0.3s ease-out;
+}
+
+/* ===== Timeline Items ===== */
+.edu-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  z-index: 2;
+}
+
+.edu-item.left {
+  left: -80px;
+  text-align: right;
+}
+
+.edu-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* ===== Glowing Dot ===== */
+.edu-dot {
+  position: absolute;
+  top: 35px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #a855f7, #22d3ee);
+  z-index: 5;
+}
+
+.edu-item.left .edu-dot {
+  right: -7px;
+}
+
+.edu-item.right .edu-dot {
+  left: -7px;
+}
+
+/* ===== Education Card ===== */
+.edu-card {
+  /* background: #161b22; */
+  border: 1px solid #30363d;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  max-width: 420px;
+  margin-top: 15px;
+}
+
+.edu-item.left .edu-card {
+  margin-left: auto;
+}
+
+.edu-item.right .edu-card {
+  margin-right: auto;
+}
+
+.edu-card:hover {
+ 
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.6);
+  border: 1px solid transparent;
+ 
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* ===== Icon ===== */
+.edu-icon {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #a855f7, #22d3ee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+  color: #fff;
+}
+
+/* ===== Text Styling ===== */
+.edu-degree {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.edu-institution {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.edu-duration {
+  color: #22d3ee;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.edu-result {
+  font-size: 0.95rem;
+  color: #a855f7;
+  margin-bottom: 10px;
+}
+
+.edu-desc {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  line-height: 1.4;
+}
+
+/* ===== Responsive (Mobile View) ===== */
+@media (max-width: 900px) {
+  /* Hide the middle glowing line for a simpler mobile layout */
+  .edu-line {
+    display: none;
+  }
+
+  /* Each item now full width and stacked vertically */
+  .edu-item {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 40px;
+    left: 0;
+    
+  }
+
+  /* Reset card alignment */
+  .edu-item.left,
+  .edu-item.right {
+    left: 0;
+  }
+
+  /* Move dots to the left side of the card */
+  .edu-dot {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 12px;
+    margin-left: 8px;
+  }
+
+  /* Card simplified and indented slightly */
+  .edu-card {
+
+    width: calc(100% - 30px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Adjust icon position for better fit */
+  .edu-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 12px;
+  }
+
+  /* Heading smaller for compact layout */
+  .edu-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  /* Adjust text for readability */
+  .edu-degree {
+    font-size: 1.1rem;
+  }
+
+  .edu-institution,
+  .edu-duration,
+  .edu-result,
+  .edu-desc {
+    font-size: 0.9rem;
+  }
+}
+
