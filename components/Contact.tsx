@@ -4,40 +4,39 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-
 import "./Contact.css";
 
 const Contact = () => {
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  const formData = new FormData(e.currentTarget);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
+    e.preventDefault();
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, message }),
-  });
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
 
-  const result = await res.json();
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, message }),
+    });
 
-  if (result.success) {
-    alert("Message sent successfully ✅");
-    (e.target as HTMLFormElement).reset();
-  } else {
-    alert("Something went wrong ❌");
-  }
-};
+    const result = await res.json();
+
+    if (result.success) {
+      alert("Message sent successfully ✅");
+      (e.target as HTMLFormElement).reset();
+    } else {
+      alert("Something went wrong ❌");
+    }
+  };
 
   return (
     <section id="contact" className="contact-section">
       <h2 className="contact-heading">Contact Me</h2>
 
       <div className="contact-container">
-        {/* ===== Left Side: Info ===== */}
+        {/* ===== Left Info Section ===== */}
         <motion.div
           className="contact-info"
           initial={{ opacity: 0, x: -60 }}
@@ -56,12 +55,12 @@ const Contact = () => {
             </a>
 
             <a
-              href="www.linkedin.com/in/prakhar-shrivastavva-47b031252"
+              href="https://www.linkedin.com/in/prakhar-shrivastavva-47b031252"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
             >
-              <FaLinkedin className="contact-icon" /> My Linkdin Profile
+              <FaLinkedin className="contact-icon" /> My LinkedIn Profile
             </a>
 
             <a
@@ -70,7 +69,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              <FaGithub className="contact-icon" />My Github
+              <FaGithub className="contact-icon" /> My GitHub
             </a>
 
             <a
@@ -79,14 +78,12 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="contact-link"
             >
-            <SiLeetcode className="contact-icon si-leetcode" /> My LeetCode
-
-</a>
-
+              <SiLeetcode className="contact-icon si-leetcode" /> My LeetCode
+            </a>
           </div>
         </motion.div>
 
-        {/* ===== Right Side: Form ===== */}
+        {/* ===== Right Form Section ===== */}
         <motion.form
           className="contact-form"
           initial={{ opacity: 0, x: 60 }}
@@ -97,17 +94,17 @@ const Contact = () => {
         >
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input id="name" type="text" placeholder="Your name" required />
+            <input id="name" name="name" type="text" placeholder="Your name" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input id="email" type="email" placeholder="Your email" required />
+            <input id="email" name="email" type="email" placeholder="Your email" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" rows={5} placeholder="Your message" required />
+            <textarea id="message" name="message" rows={5} placeholder="Your message" required />
           </div>
 
           <button type="submit" className="send-btn">

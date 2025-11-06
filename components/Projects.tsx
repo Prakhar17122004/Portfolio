@@ -34,7 +34,7 @@ const projects = [
   },
   {
     title: "Sign Language Translator (Team Project)",
-    period: "May 2025",
+    period: "May 2024",
     description: [
       "Developed real-time sign language translation using deep learning and webcam integration.",
       "Implemented user authentication system using JWT for secure session handling.",
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     title: "SkyCast App",
-    period: "March 2025",
+    period: "March 2023",
     description: [
       "Built an interactive weather forecasting web app using HTML, CSS, and JavaScript.",
       "Integrated OpenWeatherMap API to fetch real-time weather data based on city name or user’s geolocation.",
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     title: "Plant Care For Living",
-    period: "February 2025",
+    period: "February 2023",
     description: [
       "Developed a full-stack plant-care web application using React (Vite) and deployed via Netlify for fast performance.",
       "Created interactive UI components that allow users to browse plant care guides, watering schedules, and plant-type recommendations.",
